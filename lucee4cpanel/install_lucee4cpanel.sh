@@ -755,7 +755,7 @@ function test_apache_config {
 function install_apache_config {
 	test_apache_config;
 	
-	myApacheConfigFile="${basedir}/apache/railo.conf";
+	myApacheConfigFile="${basedir}/apache/lucee.conf";
 	# copy apache config file to cPanel location
 	echo -n "* Installing New Apache Config File for Railo Server...";
 	cp $myApacheConfigFile /usr/local/apache/conf/userdata/ > /dev/null;

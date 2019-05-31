@@ -103,7 +103,7 @@ function remove_railo_cpanel_plugin {
 
 function remove_railo_apache_config {
 	# remove the railo apache include if it exists
-	myRailoApacheConfig="/usr/local/apache/conf/userdata/railo.conf";
+	myRailoApacheConfig="/usr/local/apache/conf/userdata/lucee.conf";
 	echo -n "* Removing Railo Apache Config...";
 	if [[ -f $myRailoApacheConfig ]]; then
 		rm -f $myRailoApacheConfig;
@@ -137,7 +137,7 @@ function remove_railo_apache_config {
 function remove_railo_hooks {
 	# function to remove the includes from POSTWWWACCT and PREKILLACCT
 	myHookFile="/scripts/prekillacct";
-	# see if the railo config is still present
+	# see if the lucee config is still present
 	if [[ ! -f $myHookFile ]]; then
 	        echo "* PREKILLACCT does not exist...skipping.";
 	else
@@ -147,7 +147,7 @@ function remove_railo_hooks {
 	fi
 	
 	myHookFile="/scripts/postwwwacct";
-        # see if the railo config is still present
+        # see if the lucee config is still present
         if [[ ! -f $myHookFile ]]; then
                 echo "* POSTWWWACCT does not exist...skipping.";
         else
@@ -157,7 +157,7 @@ function remove_railo_hooks {
         fi
 	
         myHookFile="/scripts/postkillacct";
-        # see if the railo config is still present
+        # see if the lucee config is still present
         if [[ ! -f $myHookFile ]]; then
                 echo "* POSTKILLACCT does not exist...skipping.";
         else
